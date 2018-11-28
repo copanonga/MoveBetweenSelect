@@ -55,3 +55,22 @@
 	</body>
 	
 </html>
+
+<script>
+
+$(function(){
+    $("#copy").on("click", function(){
+        $(".options option:selected").each(function(){
+           $("#zone002").append('<option' + ' value="' + $(this).val() +'">'+$(this).text()+'</option>'); 
+            $('option:selected', "#zone001").remove();
+        });  
+    });  
+    $("#remove").on("click", function(){
+        $(".remove option:selected").each(function(){
+           $("#zone001").append('<option' + ' value="' + $(this).val() +'">'+$(this).text()+'</option>'); 
+            $('option:selected', "#zone002").remove();
+        });  
+    });  
+});
+
+</script>
